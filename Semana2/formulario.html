@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<title>Formulário para voluntários</title>
+	</head>
+
+	<body>
+		<header>
+			<h1><br />Formulário para voluntários</h1>
+			<nav>
+				<ul>
+					<li id="menu"><a href="festival.html">Página principal</a></li>
+					<li><a href="formulario.html">Formulário de Inscrição</a></li>
+				</ul>
+			</nav>
+		</header>
+		<br />
+		<form action="confirmacao.html" autocomplete="on" onsubmit="return checkComment()">
+			<label for="nome">Nome:</label><br />
+			<input type="text" id="nome" name="nome" required /><br /><br />
+			<label for="contacto">Contacto:</label><br />
+			<input
+				type="tel"
+				id="contacto"
+				name="contacto"
+				pattern="(\+[0-9]{0,3}\s?)?([0-9]\s?)+"
+				required
+			/><br /><br />
+			<label for="dia">Dias disponível:</label><br />
+			<input type="checkbox" id="dia1" name="dia1" value="dia1" />
+			<label for="dia1">21 de agosto de manhã</label><br />
+			<input type="checkbox" id="dia2" name="dia2" value="dia2" />
+			<label for="dia2">21 de agosto de tarde</label><br />
+			<input type="checkbox" id="dia3" name="dia3" value="dia3" />
+			<label for="dia3">22 de agosto de manhã</label><br />
+			<input type="checkbox" id="dia4" name="dia4" value="dia4" />
+			<label for="dia4">22 de agosto de tarde</label><br />
+			<input type="checkbox" id="dia5" name="dia5" value="dia5" />
+			<label for="dia5">23 de agosto de manhã</label><br />
+			<input type="checkbox" id="dia6" name="dia6" value="dia6" />
+			<label for="dia6">23 de agosto de tarde</label><br />
+			<input type="checkbox" id="dia7" name="dia7" value="dia7" />
+			<label for="dia7">24 de agosto de manhã</label><br />
+			<input type="checkbox" id="dia8" name="dia8" value="dia8" />
+			<label for="dia8">24 de agosto de tarde</label><br /><br />
+			<label for="comentario">Comentário:</label><br />
+			<input type="text" id="comentario" name="comentario" /><br /><br />
+
+			<input type="submit" value="Submeter" />
+		</form>
+		<footer id="contactos">
+			<h2>Contactos</h2>
+			<p>Para mais informações, contacte a organização do festival:</p>
+			<p>Email: <a href="mailto:info@festivalvilardemouros.pt">info@festivalvilardemouros.pt</a></p>
+		</footer>
+		<script src="formulario.js"></script>
+	</body>
+</html>
