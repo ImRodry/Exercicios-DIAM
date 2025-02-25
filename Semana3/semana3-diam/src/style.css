@@ -139,9 +139,7 @@ footer {
 	color: white;
 }
 
-.content {
-	margin-left: 200px;
-}
+
 
 .prev,
 .next {
@@ -203,4 +201,52 @@ footer {
 
 .arrow.right {
 	right: 10px;
+}
+
+/* Barra Lateral */
+
+#barraLateral {
+	position: fixed;  /* Fixa a barra na lateral */
+	left : 0;	/* Alinha à esquerda */
+	top: 0;		/* Começa no topo*/
+	width: 250px;	
+	height: 100%;	/* Ocupa toda a altura do ecra*/
+	background-color: #111;
+	color: white;	/* Cor do texto */
+	padding-top: 20px;	/* Espaçamento da lista ao topo */
+}
+
+#barraLateral ul {
+	list-style-type: none;	/* Remove os pontos */
+	padding: 0;
+	margin: 0;
+}
+
+#barraLateral a {
+	padding: 10px 15px;	/* Espaçamento do texto */
+	color: white;
+	text-decoration: none;	/* Remove o sublinhado */
+	display: block; /* Faz com que o link ocupe toda a largura de onde esta inserido */
+	font-size: 25px;
+}
+
+#barraLateral a:hover {
+    background-color: #259565; 
+}
+
+.app-container {
+	display: flex;
+	height: 100vh;
+}
+
+.main-content {
+	margin-left: 250px;
+	width: calc(100% - 250px);
+	display: flex;
+	flex-direction: column;
+}
+
+.conteudo-principal {
+	padding: 20px;
+	flex: 1;
 }

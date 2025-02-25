@@ -12,15 +12,20 @@ import "./style.css";
 function App() {
   return (
     <div className="app-container">
-      <Header />
       <BarraLateral />
-      <SlideShow />
-      <Informacoes />
-      <Horarios />
-      <OutrosFestivais />
-      <Footer />
+      <div className="main-content">
+        <Header />
+        <main className="conteudo-principal">
+          <SlideShow />
+          <Informacoes />
+          <Horarios />
+          <OutrosFestivais />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
+
 
 export default App;

@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header class="content">
+    <header class="content" id="cabeçalho">
 		<figure id="imagemFestival">
 			<img src="header.png" />
 		</figure>
