@@ -160,9 +160,9 @@ footer {
 
 #barraLateral {
 	position: fixed;
-	left : 0;
+	left: 0;
 	top: 0;
-	width: 250px;	
+	width: 250px;
 	height: 100%;
 	background-color: #111;
 	color: white;
@@ -185,7 +185,7 @@ footer {
 }
 
 #barraLateral a:hover {
-    background-color: #259565; 
+	background-color: #259565;
 }
 
 .app-container {
@@ -203,4 +203,8 @@ footer {
 .conteudo-principal {
 	padding: 20px;
 	flex: 1;
+}
+
+body {
+	margin: 0;
 }
