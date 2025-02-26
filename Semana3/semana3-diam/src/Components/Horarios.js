@@ -4,7 +4,7 @@ function Horarios() {
     return (
         <section id="horarios">
 			<h2>Horários</h2>
-			<table border="1">
+			<table>
 				<tr>
 					<th rowspan="3">21 de agosto</th>
 					<td>21h45</td>

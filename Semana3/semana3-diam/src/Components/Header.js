@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Header() {
-  return (
-    <header class="content" id="cabeçalho">
-		<figure id="imagemFestival">
-			<img src="header.png" />
-		</figure>
-		<nav id="menu">
-			<ul>
-				<li><a href="festival.html">Página principal</a></li>
-				<li><a href="formulario.html">Formulário de Inscrição</a></li>
-			</ul>
-		</nav>
-	</header>
-  );
+	const [opacity, setOpacity] = useState(1);
+	
+	const handleMouseOver = () => setOpacity(0);
+	const handleMouseLeave = () => setOpacity(1);
+	
+	return (
+		<header class="content" id="cabecalho">
+			<figure
+				id="imagemFestival"
+				style={{ opacity }}
+				onMouseOver={handleMouseOver}
+				onMouseLeave={handleMouseLeave}
+			>
+				<img src="header.png" alt="Festival Vilar de Mouros" />
+			</figure>
+			<nav id="menu">
+				<ul>
+					<li><a href="#cabecalho">Página principal</a></li>
+					<li><a href="#formulario">Formulário de Inscrição</a></li>
+				</ul>
+			</nav>
+		</header>
+	)
 }
 
 export default Header;
