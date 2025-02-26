@@ -38,6 +38,7 @@ function Formulario() {
 		alert("Formulário submetido com sucesso!")
 		e.target.reset()
 		setComentario("")
+		setIsFormVisible(false)
 		return true
 	}
 
@@ -48,7 +49,7 @@ function Formulario() {
 	return (
 		<div>
 			<h2 id="formulario">Formulário de Inscrição</h2>
-			<button onClick={toggleFormVisibility}>
+			<button id="button" onClick={toggleFormVisibility}>
 				{isFormVisible ? "Ocultar Formulário" : "Mostrar Formulário"}
 			</button><br /><br />
 			{isFormVisible && (
@@ -107,7 +108,7 @@ function Formulario() {
 					/>
 					<br />
 					<br />
-					<input type="submit" value="Submeter" />
+					<input type="submit" value="Submeter" id="button"/>
 				</form>
 			)}
 		</div>
