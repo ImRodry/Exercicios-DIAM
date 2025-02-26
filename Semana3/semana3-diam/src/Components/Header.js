@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 function Header() {
-	const [opacity, setOpacity] = useState(1);
-	
-	const handleMouseOver = () => setOpacity(0);
-	const handleMouseLeave = () => setOpacity(1);
-	
+	const [opacity, setOpacity] = useState(1)
+
+	const handleMouseOver = () => setOpacity(0)
+	const handleMouseLeave = () => setOpacity(1)
+
 	return (
-		<header class="content" id="cabecalho">
+		<header className="content" id="cabecalho">
 			<figure
 				id="imagemFestival"
 				style={{ opacity }}
@@ -18,12 +18,16 @@ function Header() {
 			</figure>
 			<nav id="menu">
 				<ul>
-					<li><a href="#cabecalho">Página principal</a></li>
-					<li><a href="#formulario">Formulário de Inscrição</a></li>
+					<li>
+						<a href="#cabecalho">Página principal</a>
+					</li>
+					<li>
+						<a href="#formulario">Formulário de Inscrição</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 	)
 }
 
-export default Header;
+export default Header
