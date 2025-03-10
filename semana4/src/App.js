@@ -5,6 +5,7 @@ import Informacoes from "./Components/Informacoes"
 import Horarios from "./Components/Horarios"
 import OutrosFestivais from "./Components/OutrosFestivais"
 import Footer from "./Components/Footer"
+import Artista from "./Components/Artista"
 import "./style.css"
 
 function App() {
@@ -15,6 +16,13 @@ function App() {
 				<Header />
 				<main className="conteudo-principal">
 					<Informacoes />
+					<Artista
+						nome="Chico da Tina"
+						imagem="chico.jpeg"
+						estilo="Rock"
+						descricao="Um artista incrível!"
+					/>
+
 					<Horarios />
 					<OutrosFestivais />
 				</main>
