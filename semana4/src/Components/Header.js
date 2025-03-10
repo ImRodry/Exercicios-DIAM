@@ -1,19 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 
 function Header() {
-	const [opacity, setOpacity] = useState(1)
-
-	const handleMouseOver = () => setOpacity(0)
-	const handleMouseLeave = () => setOpacity(1)
-
 	return (
 		<header className="content" id="cabecalho">
-			<figure
-				id="imagemFestival"
-				style={{ opacity }}
-				onMouseOver={handleMouseOver}
-				onMouseLeave={handleMouseLeave}
-			>
+			<figure id="imagemFestival">
 				<img src="header.png" alt="Festival Vilar de Mouros" />
 			</figure>
 			<nav id="menu">
