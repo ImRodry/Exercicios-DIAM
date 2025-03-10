@@ -7,7 +7,8 @@ function Artista({nome, imagem, estilo, descricao,urlvideo,datahora}) {
             <p>Nome: {nome}</p>
             <img src={imagem} />
             <p>Estilo Musical: {estilo}</p>
-            <p>Descriçao: {descricao}</p>
+            <p>Descrição: {descricao}</p>
+            <p>Atuação: {datahora}</p>
         </section>
     )
 }

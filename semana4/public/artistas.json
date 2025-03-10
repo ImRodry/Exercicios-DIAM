@@ -1,0 +1,39 @@
+{
+    "artistas": [
+        {
+            "nome": "GNR",
+            "imagem": "GNR.jpg",
+            "estilo": "Rock",
+            "descricao": "GNR (sigla de Grupo Novo Rock) é uma banda portuguesa de pop rock, formada no Porto, em setembro de 1980. Atualmente a banda é constituída por Tóli César Machado, Jorge Romão e Rui Reininho.",
+            "datahora": "21 de agosto às 21h45"
+        },
+        {
+            "nome": "Xutos & Pontapés",
+            "imagem": "xutos.jpeg",
+            "estilo": "Rock",
+            "descricao": "Xutos & Pontapés é uma das bandas de rock mais icónicas de Portugal, formada em 1978. São conhecidos por sucessos como \"Contentores\" e \"À Minha Maneira\".",
+            "datahora": "22 de agosto às 22h00"
+        },
+        {
+            "nome": "Da Weasel",
+            "imagem": "daweasel.jpeg",
+            "estilo": "Hip-Hop/Rap",
+            "descricao": "Da Weasel é uma banda portuguesa de hip-hop/rap-rock formada em 1993. Conhecida pelo seu estilo inovador e mistura de géneros musicais.",
+            "datahora": "23 de agosto às 20h30"
+        },
+        {
+            "nome": "Ornatos Violeta",
+            "imagem": "ornatos.jpg",
+            "estilo": "Rock Alternativo",
+            "descricao": "Ornatos Violeta é uma banda de rock alternativo portuguesa, ativa nos anos 90 e reconhecida pela sua sonoridade única e letras profundas.",
+            "datahora": "24 de agosto às 21h15"
+        },
+        {
+            "nome": "Linda Martini",
+            "imagem": "lindamartini.jpg",
+            "estilo": "Rock Alternativo",
+            "descricao": "Linda Martini é uma banda portuguesa de rock alternativo, formada em 2003. São conhecidos pelas suas performances intensas e letras marcantes.",
+            "datahora": "25 de agosto às 19h50"
+        }
+    ]
+}
