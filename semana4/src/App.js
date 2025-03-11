@@ -30,9 +30,8 @@ function App() {
 						Jorge Romão (baixo) e Rui Reininho (vocal)."
 						datahora="21 de agosto às 21h45"
 					/> */}
-
+					<Programa />
 					<Horarios />
-					<Programa/>
 					<OutrosFestivais />
 				</main>
 				<Footer />
