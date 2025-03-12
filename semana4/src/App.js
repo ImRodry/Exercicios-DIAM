@@ -2,10 +2,9 @@ import React from "react"
 import Header from "./components/Header"
 import BarraLateral from "./components/BarraLateral"
 import Informacoes from "./components/Informacoes"
-import Horarios from "./components/Horarios"
 import OutrosFestivais from "./components/OutrosFestivais"
 import Footer from "./components/Footer"
-import Programa from "./components/Programa"
+import Artistas from "./components/Artistas"
 import "./style.css"
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
 				<Header />
 				<main className="conteudo-principal">
 					<Informacoes />
-					<Programa />
-					<Horarios />
+					<Artistas />
 					<OutrosFestivais />
 				</main>
 				<Footer />

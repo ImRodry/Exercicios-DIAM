@@ -11,9 +11,6 @@ function Header() {
 					<li>
 						<a href="#cabecalho">Página principal</a>
 					</li>
-					<li>
-						<a href="#formulario">Formulário de Inscrição</a>
-					</li>
 				</ul>
 			</nav>
 		</header>

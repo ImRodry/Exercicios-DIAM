@@ -11,7 +11,7 @@ function BarraLateral() {
 					<a href="#informacoes">Informações</a>
 				</li>
 				<li>
-					<a href="#horarios">Horários</a>
+					<a href="#artistas">Artistas</a>
 				</li>
 				<li>
 					<a href="#outros">Outros festivais</a>
