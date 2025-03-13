@@ -5,7 +5,7 @@ import Informacoes from "./components/Informacoes"
 import OutrosFestivais from "./components/OutrosFestivais"
 import Footer from "./components/Footer"
 import ListaArtistas from "./components/ListaArtistas"
-import "./style.css"
+import "./styles/style.css"
 
 function App() {
 	return (

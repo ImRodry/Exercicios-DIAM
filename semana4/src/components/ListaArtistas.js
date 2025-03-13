@@ -1,7 +1,7 @@
 import React from "react"
 import artistasData from "../data/artistas.json"
-import "./Artistas.css"
 import Artista from "./Artista"
+import "../styles/ListaArtistas.css"
 
 function ListaArtistas() {
 	return (
