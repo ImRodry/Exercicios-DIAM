@@ -4,7 +4,7 @@ import BarraLateral from "./components/BarraLateral"
 import Informacoes from "./components/Informacoes"
 import OutrosFestivais from "./components/OutrosFestivais"
 import Footer from "./components/Footer"
-import Artistas from "./components/Artistas"
+import ListaArtistas from "./components/ListaArtistas"
 import "./style.css"
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 				<Header />
 				<main className="conteudo-principal">
 					<Informacoes />
-					<Artistas />
+					<ListaArtistas />
 					<OutrosFestivais />
 				</main>
 				<Footer />
