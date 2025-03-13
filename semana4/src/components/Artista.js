@@ -28,7 +28,7 @@ class Artista extends React.Component {
 				<p>{this.props.descricao}</p>
 				<p>
 					<strong>Atuação: </strong>
-					{this.props.datahora}
+					{this.props.dataHora}
 				</p>
 
 				<iframe

@@ -1,53 +1,52 @@
 {
-    "artistas": [
-        {
-            "nome": "GNR",
-            "imagem": "GNR.jpg",
-            "estilo": "Rock",
-            "descricao": "GNR (Grupo Novo Rock) é uma banda portuguesa de pop rock, formada no Porto, em setembro de 1980. Atualmente a banda é constituída por Tóli César Machado, Jorge Romão e Rui Reininho.",
-            "datahora": "21 de agosto às 21h45",
-            "video": "https://www.youtube.com/embed/BN9Q1sPI2y0"
-
-        },
-        {
-            "nome": "Xutos & Pontapés",
-            "imagem": "xutos.jpeg",
-            "estilo": "Rock",
-            "descricao": "Xutos & Pontapés é uma das bandas de rock mais icónicas de Portugal, formada em 1978. São conhecidos por sucessos como \"Contentores\" e \"À Minha Maneira\".",
-            "datahora": "22 de agosto às 22h30",
-            "video": "https://www.youtube.com/embed/R0OOSmFV2ZU"
-        },
-        {
-            "nome": "Crystal Fighters",
-            "imagem": "crystalfighters.jpg",
-            "estilo": "Indie/Electrónica",
-            "descricao": "Crystal Fighters é uma banda britânica de indie e música eletrónica, conhecida pelo seu som vibrante e influências da música folk basca.",
-            "datahora": "23 de agosto às 21h45",
-            "video": "https://www.youtube.com/embed/IVzyErnSnFI"
-        },
-        {
-            "nome": "Ornatos Violeta",
-            "imagem": "ornatos.jpg",
-            "estilo": "Rock Alternativo",
-            "descricao": "Ornatos Violeta é uma banda de rock alternativo portuguesa, ativa nos anos 90 e reconhecida pela sua sonoridade única e letras profundas.",
-            "datahora": "23 de agosto às 22h45",
-            "video": "https://www.youtube.com/embed/d_uIe7S0T4k"
-        },
-        {
-            "nome": "The Waterboys",
-            "imagem": "thewaterboys.jpeg",
-            "estilo": "Rock/Folk",
-            "descricao": "The Waterboys é uma banda escocesa de rock e folk formada nos anos 80, famosa por sucessos como 'The Whole of the Moon'.",
-            "datahora": "24 de agosto às 21h15",
-            "video": "https://www.youtube.com/embed/sBW8Vnp8BzU"
-        },
-        {
-            "nome": "The Darkness",
-            "imagem": "thedarkness.jpeg",
-            "estilo": "Hard Rock/Glam Rock",
-            "descricao": "The Darkness é uma banda britânica de hard rock e glam rock formada no início dos anos 2000, conhecida pelo sucesso 'I Believe in a Thing Called Love'.",
-            "datahora": "24 de agosto às 23h00",
-            "video": "https://www.youtube.com/embed/tKjZuykKY1I"
-          }          
-    ]
+	"artistas": [
+		{
+			"nome": "GNR",
+			"imagem": "GNR.jpg",
+			"estilo": "Rock",
+			"descricao": "GNR (Grupo Novo Rock) é uma banda portuguesa de pop rock, formada no Porto, em setembro de 1980. Atualmente a banda é constituída por Tóli César Machado, Jorge Romão e Rui Reininho.",
+			"dataHora": "21 de agosto às 21h45",
+			"video": "https://www.youtube.com/embed/BN9Q1sPI2y0"
+		},
+		{
+			"nome": "Xutos & Pontapés",
+			"imagem": "xutos.jpeg",
+			"estilo": "Rock",
+			"descricao": "Xutos & Pontapés é uma das bandas de rock mais icónicas de Portugal, formada em 1978. São conhecidos por sucessos como \"Contentores\" e \"À Minha Maneira\".",
+			"dataHora": "22 de agosto às 22h30",
+			"video": "https://www.youtube.com/embed/R0OOSmFV2ZU"
+		},
+		{
+			"nome": "Crystal Fighters",
+			"imagem": "crystalfighters.jpg",
+			"estilo": "Indie/Electrónica",
+			"descricao": "Crystal Fighters é uma banda britânica de indie e música eletrónica, conhecida pelo seu som vibrante e influências da música folk basca.",
+			"dataHora": "23 de agosto às 21h45",
+			"video": "https://www.youtube.com/embed/IVzyErnSnFI"
+		},
+		{
+			"nome": "Ornatos Violeta",
+			"imagem": "ornatos.jpg",
+			"estilo": "Rock Alternativo",
+			"descricao": "Ornatos Violeta é uma banda de rock alternativo portuguesa, ativa nos anos 90 e reconhecida pela sua sonoridade única e letras profundas.",
+			"dataHora": "23 de agosto às 22h45",
+			"video": "https://www.youtube.com/embed/d_uIe7S0T4k"
+		},
+		{
+			"nome": "The Waterboys",
+			"imagem": "thewaterboys.jpeg",
+			"estilo": "Rock/Folk",
+			"descricao": "The Waterboys é uma banda escocesa de rock e folk formada nos anos 80, famosa por sucessos como 'The Whole of the Moon'.",
+			"dataHora": "24 de agosto às 21h15",
+			"video": "https://www.youtube.com/embed/sBW8Vnp8BzU"
+		},
+		{
+			"nome": "The Darkness",
+			"imagem": "thedarkness.jpeg",
+			"estilo": "Hard Rock/Glam Rock",
+			"descricao": "The Darkness é uma banda britânica de hard rock e glam rock formada no início dos anos 2000, conhecida pelo sucesso 'I Believe in a Thing Called Love'.",
+			"dataHora": "24 de agosto às 23h00",
+			"video": "https://www.youtube.com/embed/tKjZuykKY1I"
+		}
+	]
 }
