@@ -1,12 +1,17 @@
 import React from "react"
 
 class Artista extends React.Component {
+	constructor(props) {
+		super(props)
+		this.videoRef = React.createRef()
+	}
+
 	toggleVideo() {
-		const videoElement = document.getElementById(`video-${this.props.index}`)
-		if (videoElement.style.display === "none" || videoElement.style.display === "") {
-			videoElement.style.display = "block"
+		const video = this.videoRef.current
+		if (video.style.display === "none" || video.style.display === "") {
+			video.style.display = "block"
 		} else {
-			videoElement.style.display = "none"
+			video.style.display = "none"
 		}
 	}
 
@@ -32,6 +37,7 @@ class Artista extends React.Component {
 				</p>
 
 				<iframe
+					ref={this.videoRef}
 					id={`video-${this.props.index}`}
 					width="300"
 					height="169"
