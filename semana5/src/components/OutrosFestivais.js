@@ -1,5 +1,3 @@
-import React from "react"
-
 function OutrosFestivais() {
 	return (
 		<section id="outros">

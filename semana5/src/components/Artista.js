@@ -1,9 +1,9 @@
-import React from "react"
+import { Component, createRef } from "react"
 
-class Artista extends React.Component {
+class Artista extends Component {
 	constructor(props) {
 		super(props)
-		this.videoRef = React.createRef()
+		this.videoRef = createRef()
 	}
 
 	toggleVideo() {
