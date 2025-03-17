@@ -1,4 +1,3 @@
-import React from "react"
 import artistasData from "../data/artistas.json"
 import Artista from "./Artista"
 import "../styles/ListaArtistas.css"
