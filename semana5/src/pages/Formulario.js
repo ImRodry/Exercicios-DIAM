@@ -1,13 +1,16 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 function Formulario() {
+    const navigate = useNavigate()
+
     const [formData, setFormData] = useState({
         nome: '',
         contacto: '',
         comentario: '',
-        days: Array(8).fill(false) // Simplified array initialization
+        days: Array(8).fill(false)
     })
     
     const insultos = [
@@ -45,12 +48,14 @@ function Formulario() {
         e.preventDefault()
         
         alert(`Obrigado ${formData.nome} pela sua inscrição, em breve será contactado pela organização do festival`)
-        setFormData({
-            nome: '',
-            contacto: '',
-            comentario: '',
-            days: Array(8).fill(false)
-        })
+        // setFormData({
+        //     nome: '',
+        //     contacto: '',
+        //     comentario: '',
+        //     days: Array(8).fill(false)
+        // })
+
+        navigate('/')        
     }
 
     return (
@@ -115,7 +120,7 @@ function Formulario() {
                     <input 
                         type="submit" 
                         value="Submeter" 
-                        disabled={hasInsults()}
+                        disabled={hasInsults() || !formData.days.some(Boolean)}
                     />
                 </form>
             </main>
