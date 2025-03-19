@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 function BarraLateral() {
 	return (
 		<aside id="barraLateral">
@@ -22,4 +24,4 @@ function BarraLateral() {
 	)
 }
 
-export default BarraLateral
+export default memo(BarraLateral)
