@@ -59,9 +59,9 @@ function Formulario() {
     }
 
     return (
-        <div className="main-content">
+        <div className="conteudo-principal">
             <Header />
-            <main className="conteudo-principal">
+            <main className="main-content">
                 <h2>Formulário de Inscrição</h2>
                 <form onSubmit={handleSubmit} autoComplete="on">
                     <label htmlFor="nome">Nome:</label><br />

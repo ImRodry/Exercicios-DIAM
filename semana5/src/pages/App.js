@@ -8,17 +8,17 @@ import "../styles/style.css"
 
 function App() {
 	return (
-		<div className="main-content">
-			<Header />
-			<div className="app-container">
-				<BarraLateral />
-				<main className="conteudo-principal">
+		<div className="app-container">
+			<BarraLateral />
+			<main className="conteudo-principal">
+				<Header />
+				<div className="main-content">
 					<Informacoes />
 					<ListaArtistas />
 					<OutrosFestivais />
-				</main>
-			</div>
-			<Footer />
+				</div>
+				<Footer />
+			</main>
 		</div>
 	)
 }

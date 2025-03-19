@@ -15,35 +15,37 @@ nav ul {
 	background-color: #259565;
 }
 
-nav li a {
+button {
+	border: none;
+}
+
+nav li button {
 	float: inline-start;
 	color: white;
 	text-align: center;
 	padding: 15px 15px;
 }
 
-section li a {
+section li button {
 	margin: 5;
 }
 
-nav a:link,
-nav a:visited {
+nav button {
 	background-color: #259565;
 	color: white;
 	text-align: center;
-	font-size: 20px;
+	font-size: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-nav a:hover,
-nav a:active {
+nav button:hover {
 	background-color: black;
 	color: white;
 }
 
 #outros a {
 	color: black;
-	font-size: 20;
+	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -62,36 +64,15 @@ nav a:active {
 }
 
 h1 {
-	font-size: 40;
+	font-size: 40px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
 }
 
 h2 {
-	font-size: 25;
+	font-size: 25px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
-}
-
-table {
-	border-collapse: collapse;
-	width: 50%;
-	border: 3px solid black;
-}
-
-th {
-	color: black;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	border: 3px solid black;
-	background-color: #777;
-}
-
-td {
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	border: 3px solid black;
-	background-color: #259565;
 }
 
 form {
@@ -106,49 +87,11 @@ footer {
 	color: black;
 }
 
-#slideshow-container {
-	width: 600px;
-	height: 400px;
-	margin: auto;
-	position: relative;
-	overflow: hidden;
-}
-
-#slideshow {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-
-.arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.5);
-	border: none;
-	cursor: pointer;
-	padding: 10px;
-	z-index: 1;
-	user-select: none;
-	transition: background-color 0.3s;
-}
-
-.arrow:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-}
-
-.arrow.left {
-	left: 10px;
-}
-
-.arrow.right {
-	right: 10px;
-}
-
 #barraLateral {
-	width: 225px;
+	flex: 0 0 250px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 	background-color: #111;
 	color: white;
 }
@@ -179,28 +122,13 @@ footer {
 .main-content {
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
 }
 
 .conteudo-principal {
-	padding: 20px;
 	flex: 1;
 }
 
 body {
 	margin: 0;
-}
-
-#button {
-	transition-duration: 0.4s;
-	background-color: white;
-	border-radius: 4px;
-	padding: 6px 40px;
-	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-#button:hover {
-	background-color: #259565;
-	color: white;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

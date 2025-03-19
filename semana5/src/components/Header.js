@@ -1,22 +1,25 @@
 import { memo } from "react"
+import { useNavigate } from "react-router"
 
 function Header() {
-    return (
-        <header className="content" id="cabecalho">
-            <div className="header-container">
-                <nav id="menu">
-                    <ul>
-                        <li>
-                            <a href="/">Página principal</a>
-                        </li>
-                        <li>
-                            <a href="/form">Formulário de Inscrição</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    )
+	const navigate = useNavigate()
+
+	return (
+		<header className="content" id="cabecalho">
+			<div className="header-container">
+				<nav id="menu">
+					<ul>
+						<li>
+							<button onClick={() => navigate("/")}>Página principal</button>
+						</li>
+						<li>
+							<button onClick={() => navigate("/form")}>Formulário de Inscrição</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	)
 }
 
 export default memo(Header)
