@@ -1,0 +1,134 @@
+p {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #259565;
+}
+
+button {
+	border: none;
+}
+
+nav li button {
+	float: inline-start;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+}
+
+section li button {
+	margin: 5;
+}
+
+nav button {
+	background-color: #259565;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+nav button:hover {
+	background-color: black;
+	color: white;
+}
+
+#outros a {
+	color: black;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#outros a:link,
+#outros a:visited {
+	color: black;
+}
+
+#outros a:hover,
+#outros a:active {
+	color: #259565;
+}
+
+#outros li {
+	color: black;
+}
+
+h1 {
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+h2 {
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+form {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: black;
+}
+
+#barraLateral {
+	flex: 0 0 250px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+	background-color: #111;
+	color: white;
+}
+
+#barraLateral ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#barraLateral a {
+	padding: 10px 15px;
+	color: white;
+	text-decoration: none;
+	display: block;
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#barraLateral a:hover {
+	background-color: #259565;
+}
+
+.app-container {
+	display: flex;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.conteudo-principal {
+	flex: 1;
+}
+
+body {
+	margin: 0;
+}
