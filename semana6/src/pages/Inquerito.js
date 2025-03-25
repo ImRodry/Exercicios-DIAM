@@ -1,17 +1,17 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import FormInscricao from "../components/FormInscricao"
+import FormInquerito from "../components/FormInquerito"
 
-function Formulario() {
+function Inquerito() {
     return (
         <div className="conteudo-principal">
             <Header />
             <main className="main-content">
-                <FormInscricao />
+                <FormInquerito />
             </main>
             <Footer />
         </div>
     )
 }
 
-export default Formulario
+export default Inquerito

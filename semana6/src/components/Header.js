@@ -10,10 +10,13 @@ function Header() {
 				<nav id="menu">
 					<ul>
 						<li>
-							<button onClick={() => navigate("/")}>Página principal</button>
+							<button onClick={() => navigate("/")}>Página Principal</button>
 						</li>
 						<li>
-							<button onClick={() => navigate("/form")}>Formulário de Inscrição</button>
+							<button onClick={() => navigate("/formulario")}>Formulário de Inscrição</button>
+						</li>
+						<li>
+							<button onClick={() => navigate('/inquerito')}>Inquérito</button>
 						</li>
 					</ul>
 				</nav>
