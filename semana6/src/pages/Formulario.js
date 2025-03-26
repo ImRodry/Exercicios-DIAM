@@ -1,17 +1,20 @@
+import { Component } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import FormInscricao from "../components/FormInscricao"
 
-function Formulario() {
-    return (
-        <div className="conteudo-principal">
-            <Header />
-            <main className="main-content">
-                <FormInscricao />
-            </main>
-            <Footer />
-        </div>
-    )
+class Formulario extends Component {
+    render() {
+        const { Form } = this.props
+        return (
+            <div className="conteudo-principal">
+                <Header />
+                <main className="main-content">
+                    <Form />
+                </main>
+                <Footer />
+            </div>
+        )
+    }
 }
 
 export default Formulario
