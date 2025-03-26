@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import artistasData from '../data/artistas.json'
+import { useSubmissions } from '../pages/Context'
 
 function FormInquerito() {
     const navigate = useNavigate()
+    const { allSubmissions, setAllSubmissions } = useSubmissions()
     const [formData, setFormData] = useState({
         artistas: [],
         dataHora: '',
@@ -17,7 +19,7 @@ function FormInquerito() {
                 return {
                     ...prevState,
                     artistas: [...prevState.artistas, value]
-                };
+                }
             } else {
                 return {
                     ...prevState,
@@ -40,7 +42,12 @@ function FormInquerito() {
             alert('Por favor, selecione pelo menos um artista.')
             return
         }
+        setAllSubmissions(prev => [...prev, formData])
         navigate('/resposta', { state: formData })
+    }
+
+    const showStatistics = () => {
+        navigate('/estatisticas', { state: { submissions: allSubmissions } })
     }
 
     return (
@@ -92,6 +99,12 @@ function FormInquerito() {
                     type="submit"
                     value="Submeter"
                 />
+                <button
+                    type="button"
+                    onClick={showStatistics}
+                >
+                    Ver Estatísticas
+                </button>
             </form>
         </>
     )
