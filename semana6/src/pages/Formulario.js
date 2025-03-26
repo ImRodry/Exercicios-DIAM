@@ -6,7 +6,7 @@ class Formulario extends Component {
     render() {
         const { Form } = this.props
         return (
-            <div className="conteudo-principal">
+            <div className="page-wrapper">
                 <Header />
                 <main className="main-content">
                     <Form />

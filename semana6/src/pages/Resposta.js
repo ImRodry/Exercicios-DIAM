@@ -7,7 +7,7 @@ function Resposta() {
     const formData = location.state || {}
 
     return (
-        <div className="conteudo-principal">
+        <div className="page-wrapper">
             <Header />
             <main className="main-content">
                 <h2>Resposta Submetida</h2>

@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="app-container">
 			<BarraLateral />
-			<main className="conteudo-principal">
+			<main className="page-wrapper">
 				<Header />
 				<div className="main-content">
 					<Informacoes />

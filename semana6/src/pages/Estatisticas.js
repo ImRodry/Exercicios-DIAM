@@ -25,7 +25,7 @@ function Estatisticas() {
     }
 
     return (
-        <div className="conteudo-principal">
+        <div className="page-wrapper">
             <Header />
             <main className="main-content">
                 <h2>Estatísticas dos Inquéritos</h2>
