@@ -1,10 +1,11 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { useSubmissions } from './Context'
+import { useLocation } from 'react-router'
 
 function Estatisticas() {
-    const { allSubmissions } = useSubmissions()
-
+    const location = useLocation()
+    const allSubmissions = location.state || []
+    
     const getArtistStats = () => {
         const artistCount = {}
         allSubmissions.forEach(submission => {

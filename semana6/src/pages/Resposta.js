@@ -11,7 +11,7 @@ function Resposta() {
             <Header />
             <main className="main-content">
                 <h2>Resposta Submetida</h2>
-                <p>Artistas Preferidos: {formData.artistas?.join(', ')}</p>
+                <p>Artistas Preferidos: {formData.artistas.join(', ')}</p>
                 <p>Horário Preferido: {formData.dataHora}</p>
                 <p>Críticas/Sugestões: {formData.criticas || 'Sem críticas ou sugestões'}</p>
             </main>

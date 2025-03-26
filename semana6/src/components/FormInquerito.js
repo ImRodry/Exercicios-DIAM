@@ -38,7 +38,7 @@ function FormInquerito() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (formData.artistas.length === 0) {
+        if (!formData.artistas.length) {
             alert('Por favor, selecione pelo menos um artista.')
             return
         }
@@ -47,7 +47,7 @@ function FormInquerito() {
     }
 
     const showStatistics = () => {
-        navigate('/estatisticas', { state: { submissions: allSubmissions } })
+        navigate('/estatisticas', { state: allSubmissions })
     }
 
     return (
