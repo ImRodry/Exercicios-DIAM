@@ -44,7 +44,7 @@ input[type=submit]:disabled {
 	box-shadow: none;
 }
 
-form button {
+.botao-verde {
 	transition-duration: 0.4s;
 	background-color: #259565;;
 	border-radius: 4px;

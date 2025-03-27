@@ -1,65 +1,66 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function Estatisticas() {
-    const allSubmissions = JSON.parse(sessionStorage.getItem('submissions'))
-    
-    const getArtistStats = () => {
-        const artistCount = {}
-        allSubmissions.forEach(submission => {
-            submission.artistas.forEach(artista => {
-                artistCount[artista] = (artistCount[artista] || 0) + 1
-            })
-        })
-        return artistCount
-    }
+	const allSubmissions = JSON.parse(sessionStorage.getItem("submissions"))
 
-    const getScheduleStats = () => {
-        const scheduleCount = {}
-        allSubmissions.forEach(submission => {
-            scheduleCount[submission.dataHora] = (scheduleCount[submission.dataHora] || 0) + 1
-        })
-        return scheduleCount
-    }
+	const artistStats = allSubmissions
+		.map(s => s.artistas)
+		.flat()
+		.reduce((acc, curr) => {
+			acc[curr] ??= 0
+			acc[curr]++
+			return acc
+		}, {})
 
-    return (
-        <div className="page-wrapper">
-            <Header />
-            <main className="main-content">
-                <h2>Estatísticas dos Inquéritos</h2>
+	const scheduleStats = allSubmissions.reduce((acc, curr) => {
+		acc[curr.dataHora] ??= 0
+		acc[curr.dataHora]++
+		return acc
+	}, {})
 
-                {allSubmissions.length === 0 ? (
-                    <p>Ainda não há submissões para exibir estatísticas.</p>
-                ) : (
-                    <>
-                        <h3>Artistas preferidos:</h3>
-                        <ul>
-                            {Object.keys(getArtistStats()).map(artista => (
-                                <li key={artista}>{artista}: {getArtistStats()[artista]} vez(es)</li>
-                            ))}
-                        </ul>
+	return (
+		<div className="page-wrapper">
+			<Header />
+			<main className="main-content">
+				<h2>Estatísticas dos Inquéritos</h2>
 
-                        <h3>Horários preferidos:</h3>
-                        <ul>
-                            {Object.keys(getScheduleStats()).map(horario => (
-                                <li key={horario}>{horario}: {getScheduleStats()[horario]} vez(es)</li>
-                            ))}
-                        </ul>
+				{allSubmissions.length === 0 ? (
+					<p>Ainda não há submissões para exibir estatísticas.</p>
+				) : (
+					<>
+						<h3>Artistas preferidos:</h3>
+						<ul>
+							{Object.entries(artistStats).map(([artista, times]) => (
+								<li key={artista}>
+									{artista}: {times === 1 ? "1 vez" : `${times} vezes`}
+								</li>
+							))}
+						</ul>
 
-                        <h3>Críticas submetidas:</h3>
-                        <ul>
-                            {allSubmissions.map((submission, index) => (
-                                <li key={index}>
-                                    {submission.criticas || 'Sem crítica'}
-                                </li>
-                            ))}
-                        </ul>
-                    </>
-                )}
-            </main>
-            <Footer />
-        </div>
-    )
+						<h3>Horários preferidos:</h3>
+						<ul>
+							{Object.entries(scheduleStats).map(([horario, times]) => (
+								<li key={horario}>
+									{horario}: {times === 1 ? "1 vez" : `${times} vezes`}
+								</li>
+							))}
+						</ul>
+
+						<h3>Críticas submetidas:</h3>
+						<ul>
+							{allSubmissions
+								.filter(s => s.criticas)
+								.map((submission, index) => (
+									<li key={index}>{submission.criticas}</li>
+								))}
+						</ul>
+					</>
+				)}
+			</main>
+			<Footer />
+		</div>
+	)
 }
 
 export default Estatisticas

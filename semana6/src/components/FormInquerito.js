@@ -10,9 +10,12 @@ function FormInquerito() {
 		criticas: "",
 	})
 
-	const getAllSubmissions = () => {
+	const addSubmission = newSubmission => {
 		const storedSubmissions = sessionStorage.getItem("submissions")
-		return storedSubmissions ? JSON.parse(storedSubmissions) : []
+		let parsedSubmissions = storedSubmissions ? JSON.parse(storedSubmissions) : []
+		if (!Array.isArray(parsedSubmissions)) parsedSubmissions = []
+
+		sessionStorage.setItem("submissions", JSON.stringify(parsedSubmissions.push(newSubmission)))
 	}
 
 	const handleCheckboxChange = e => {
@@ -46,17 +49,9 @@ function FormInquerito() {
 			return
 		}
 
-		const currentSubmissions = getAllSubmissions()
-		const updatedSubmissions = [...currentSubmissions, formData]
-
-		sessionStorage.setItem("submissions", JSON.stringify(updatedSubmissions))
+		addSubmission(formData)
 
 		navigate("/resposta", { state: formData })
-	}
-
-	const showStatistics = () => {
-		const currentSubmissions = getAllSubmissions()
-		navigate("/estatisticas", { state: currentSubmissions })
 	}
 
 	return (
@@ -112,9 +107,11 @@ function FormInquerito() {
 				<br />
 				<br />
 
-				<button type="submit">Submeter</button>
+				<button className="botao-verde" type="submit">
+					Submeter
+				</button>
 
-				<button type="button" onClick={showStatistics}>
+				<button className="botao-verde" type="button" onClick={() => navigate("/estatisticas")}>
 					Ver Estatísticas
 				</button>
 			</form>
