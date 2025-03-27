@@ -1,0 +1,20 @@
+{
+	"name": "exercicios-diam",
+	"private": true,
+	"workspaces": [
+		"semana*"
+	],
+	"scripts": {
+		"start": "npm run start --workspace ",
+		"build": "npm run build --workspace ",
+		"test": "npm run test --workspace ",
+		"eject": "npm run eject --workspace "
+	},
+	"dependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-router": "^7.4.0",
+		"react-scripts": "^5.0.1",
+		"web-vitals": "^4.2.4"
+	}
+}
