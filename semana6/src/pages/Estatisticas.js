@@ -1,10 +1,8 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { useLocation } from 'react-router'
 
 function Estatisticas() {
-    const location = useLocation()
-    const allSubmissions = location.state || []
+    const allSubmissions = JSON.parse(sessionStorage.getItem('submissions'))
     
     const getArtistStats = () => {
         const artistCount = {}

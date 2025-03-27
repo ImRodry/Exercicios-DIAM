@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import artistasData from '../data/artistas.json'
-import { useSubmissions } from '../pages/Context'
 
 function FormInquerito() {
     const navigate = useNavigate()
-    const { allSubmissions, setAllSubmissions } = useSubmissions()
     const [formData, setFormData] = useState({
         artistas: [],
         dataHora: '',
         criticas: ''
     })
+
+    const getAllSubmissions = () => {
+        const storedSubmissions = sessionStorage.getItem('submissions')
+        return storedSubmissions ? JSON.parse(storedSubmissions) : []
+    }
 
     const handleCheckboxChange = (e) => {
         const { value, checked } = e.target
@@ -42,12 +45,18 @@ function FormInquerito() {
             alert('Por favor, selecione pelo menos um artista.')
             return
         }
-        setAllSubmissions(prev => [...prev, formData])
+        
+        const currentSubmissions = getAllSubmissions()
+        const updatedSubmissions = [...currentSubmissions, formData]
+
+        sessionStorage.setItem('submissions', JSON.stringify(updatedSubmissions))
+        
         navigate('/resposta', { state: formData })
     }
 
     const showStatistics = () => {
-        navigate('/estatisticas', { state: allSubmissions })
+        const currentSubmissions = getAllSubmissions()
+        navigate('/estatisticas', { state: currentSubmissions })
     }
 
     return (
@@ -93,15 +102,12 @@ function FormInquerito() {
                     cols="25"
                     value={formData.criticas}
                     onChange={handleChange}
-
                 /><br /><br />
 
-                <button type="submit"
-                >
+                <button type="submit">
                     Submeter
                 </button>
                     
-               
                 <button
                     type="button"
                     onClick={showStatistics}
