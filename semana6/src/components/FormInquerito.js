@@ -85,20 +85,23 @@ function FormInquerito() {
                 ))}
                 <br />
                 <label htmlFor="criticas">Críticas ou sugestões:</label><br />
-                <input
+                <textarea
                     type="text"
                     id="criticas"
                     name="criticas"
+                    rows="4"
+                    cols="25"
                     value={formData.criticas}
                     onChange={handleChange}
-                    size="50"
-                    placeholder="Escreva as suas críticas ou sugestões"
+
                 /><br /><br />
 
-                <input
-                    type="submit"
-                    value="Submeter"
-                />
+                <button type="submit"
+                >
+                    Submeter
+                </button>
+                    
+               
                 <button
                     type="button"
                     onClick={showStatistics}

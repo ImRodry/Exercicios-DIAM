@@ -15,11 +15,32 @@ nav ul {
 	background-color: #259565;
 }
 
-button {
-	border: none;
+textarea {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 7px;
+}
+
+form button {
+	transition-duration: 0.4s;
+	background-color: #259565;;
+	border-radius: 4px;
+	padding: 6px 40px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 5px;
+	
+}
+
+form button:hover {
+	background-color: #259565;
+	color: white;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	transform: scale(1.05);
 }
 
 nav li button {
+	border: none;
 	float: inline-start;
 	color: white;
 	text-align: center;
