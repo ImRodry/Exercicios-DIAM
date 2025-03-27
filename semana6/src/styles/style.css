@@ -21,10 +21,34 @@ textarea {
 	margin-top: 7px;
 }
 
+input[type=submit] {
+	transition-duration: 0.4s;
+	background-color: #259565;;
+	border-radius: 4px;
+	color: white;
+	padding: 6px 40px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+input[type=submit]:hover {
+	background-color: #259565;
+	color: white;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	transform: scale(1.05);
+}
+
+input[type=submit]:disabled {
+	background-color: rgba(0,0,0,0.19);
+	color: white;
+	transform: scale(1);
+	box-shadow: none;
+}
+
 form button {
 	transition-duration: 0.4s;
 	background-color: #259565;;
 	border-radius: 4px;
+	color: white;
 	padding: 6px 40px;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
