@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import datetime
 
 # Create your models here.
 
@@ -11,7 +12,7 @@ class Questao(models.Model):
         return self.questao_texto
     
     def foi_publicada_recentemente(self):
-        return self.pub_data >= timezone.now() - timezone.timedelta(days=1)
+        return self.pub_data >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Opcao(models.Model):
