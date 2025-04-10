@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "reactstrap";
-import DetailModal from "../Pages/DetailPage";
-import VoteModal from "../Pages/VotePage";
+import DetailModal from "./DetailModal";
+import VoteModal from "./VoteModal";
 import axios from "axios";
 function QuestionTable() {
     const URL_QUESTIONS = "http://localhost:8000/votacao/api/questions/"; // (1)

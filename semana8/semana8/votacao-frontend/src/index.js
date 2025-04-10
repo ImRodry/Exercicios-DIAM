@@ -1,7 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Home from "./Components/Home";
+import React, { StrictMode } from 'react';
+import { createRoot} from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from 'react-router';
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Home />);
+import DetailPage from "./Pages/DetailPage";
+import VotePage from "./Pages/VotePage";
+import Home from "./Pages/Home";
+
+const root = createRoot(document.getElementById('root'))
+root.render(
+    <StrictMode>
+        <Home />
+    </StrictMode>
+)
 
