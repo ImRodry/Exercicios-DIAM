@@ -32,8 +32,7 @@ function QuestionTable() {
 			body: JSON.stringify(newQuestion),
 			headers: { "Content-Type": "application/json" },
 		})
-			.then(res => {
-				if (!res.ok) throw new Error("Erro ao criar questão.")
+			.then(() => {
 				return fetch(URL_QUESTIONS)
 			})
 			.then(r => r.json())
