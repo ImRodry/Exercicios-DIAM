@@ -1,27 +1,21 @@
-import axios from "axios"
-import React, { useEffect, useState } from "react"
-import { Table } from "reactstrap"
-import DetailModal from "../Pages/DetailPage"
-import VoteModal from "../Pages/VotePage"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router"
+import { Button, Table } from "reactstrap"
+import { API_URL } from "../index"
 
 function QuestionTable() {
-	const URL_QUESTIONS = "http://localhost:8000/votacao/api/questions/" // (1)
-	const [questionList, setQuestionList] = useState([]) // (2)
-	const getQuestions = () => {
-		// (3)
-		axios.get(URL_QUESTIONS).then(request => {
-			setQuestionList(request.data)
-		})
-	}
+	const URL_QUESTIONS = API_URL + "/questions/"
+	const [questionList, setQuestionList] = useState([])
+	const navigate = useNavigate()
+
 	useEffect(() => {
-		//(4)
-		getQuestions()
-	}, [])
+		fetch(URL_QUESTIONS)
+			.then(r => r.json())
+			.then(data => setQuestionList(data))
+	}, [URL_QUESTIONS])
 	const centered = { textAlign: "center" }
 	return (
 		<Table light="true">
-			{" "}
-			{/* (5) */}
 			<thead>
 				<tr>
 					<th>Texto</th>
@@ -29,20 +23,20 @@ function QuestionTable() {
 				</tr>
 			</thead>
 			<tbody>
-				{questionList.map(
-					(
-						question // (6)
-					) => (
-						<tr key={question.pk}>
-							<td>{question.questao_texto}</td>
-							<td style={centered}>
-								<DetailModal question={question} />
-								&nbsp;
-								<VoteModal question={question} />
-							</td>
-						</tr>
-					)
-				)}
+				{questionList.map(question => (
+					<tr key={question.pk}>
+						<td>{question.questao_texto}</td>
+						<td style={centered}>
+							<Button onClick={() => navigate("/detalhes", { state: question })} color="warning">
+								Detalhes
+							</Button>
+							&nbsp;
+							<Button onClick={() => navigate("/votacao", { state: question })} color="success">
+								Votar
+							</Button>
+						</td>
+					</tr>
+				))}
 			</tbody>
 		</Table>
 	)

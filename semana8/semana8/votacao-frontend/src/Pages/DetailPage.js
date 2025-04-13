@@ -1,41 +1,64 @@
-import axios from "axios"
-import React, { useState } from "react"
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap"
-import DetailData from "../Components/DetailData"
+import moment from "moment"
+import { useEffect, useState } from "react"
+import { useNavigate, useLocation } from "react-router"
+import { Button, Container, Form, FormGroup, Table } from "reactstrap"
+import { API_URL } from "../index"
 
-function DetailModal({ question }) {
-	// (1)
-	const URL_OPTIONS = "http://localhost:8000/votacao/api/options/" // (2)
-	const [showModal, setShowModal] = useState(false) // (3)
-	const [optionList, setOptionList] = useState([]) // (4)
-	const getOptions = () => {
-		// (5)
-		axios.get(URL_OPTIONS + question.pk).then(request => {
-			setOptionList(request.data)
-		})
-	}
-	const toggleModal = () => {
-		// (6)
-		if (!showModal) getOptions()
-		setShowModal(showModal => !showModal)
-	}
+const URL_OPTIONS = API_URL + "/options/"
+function DetailPage() {
+	const [optionList, setOptionList] = useState([])
+	const navigate = useNavigate()
+	const { state: question } = useLocation()
+	if (!question) navigate("/")
+
+	useEffect(() => {
+		fetch(URL_OPTIONS + question.pk)
+			.then(r => r.json())
+			.then(data => setOptionList(data))
+	}, [question])
+
+	if (!question) return <p>Nenhuma questão selecionada.</p>
+
 	return (
-		<>
-			<Button onClick={toggleModal} color="warning">
-				{" "}
-				{/* (7) */}
-				Detalhe
-			</Button>
-			<Modal isOpen={showModal} toggle={toggleModal}>
-				{" "}
-				{/* (8) */}
-				<ModalHeader toggle={toggleModal}>Detalhe da questão {question.pk}</ModalHeader>
-				<ModalBody>
-					<DetailData options={optionList} question={question} toggle={toggleModal} /> {/* (9) */}
-				</ModalBody>
-			</Modal>
-		</>
+		<Container
+			style={{
+				display: "flex",
+				flexDirection: "column",
+				justifyContent: "center",
+				alignItems: "center",
+				height: "50vh",
+			}}
+		>
+			<h2>Detalhes da questão {question.pk}</h2>
+			<Form>
+				<FormGroup>
+					<b>Texto:</b>
+					<p>{question.questao_texto} </p>
+					<b>Data de publicação:</b>
+					<p>{moment(question.pub_data).format("DD-MM-YYYY HH:mm")}</p>
+				</FormGroup>
+				<FormGroup>
+					<Table>
+						<thead>
+							<tr>
+								<th style={{ textAlign: "left" }}>Opção</th>
+								<th style={{ textAlign: "right" }}>Votos</th>
+							</tr>
+						</thead>
+						<tbody>
+							{optionList.map(o => (
+								<tr>
+									<td style={{ textAlign: "left" }}>{o.opcao_texto}</td>
+									<td style={{ textAlign: "right" }}>{o.votos}</td>
+								</tr>
+							))}
+						</tbody>
+					</Table>
+				</FormGroup>
+			</Form>
+			<Button onClick={() => navigate("/")}>Voltar à página inicial</Button>
+		</Container>
 	)
 }
 
-export default DetailModal
+export default DetailPage

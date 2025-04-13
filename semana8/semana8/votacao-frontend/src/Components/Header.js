@@ -3,14 +3,13 @@ function Header() {
 		<>
 			<div className="text-center">
 				<img
-					src="/images/iscte.png" // (1)
+					src="/images/iscte.png"
 					width="600"
 					alt="ISCTE"
 					className="img-thumbnail"
-					style={{ marginTop: "20px" }} // (2)
+					style={{ marginTop: "20px" }}
 				/>
-				<h2>Exemplo</h2>
-				<h3>Integração de Django com React</h3>
+				<h2>Integração de Django com React</h2>
 			</div>
 		</>
 	)

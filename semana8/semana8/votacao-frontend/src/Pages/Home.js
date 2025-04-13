@@ -1,11 +1,9 @@
 import { Container, Row, Col } from "reactstrap"
-import Header from "../Components/Header"
 import QuestionTable from "../Components/QuestionTable"
 
 function Home() {
 	return (
 		<>
-			<Header />
 			<Content />
 		</>
 	)

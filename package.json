@@ -2,7 +2,7 @@
 	"name": "exercicios-diam",
 	"private": true,
 	"workspaces": [
-		"semana*"
+		"semana*/**/"
 	],
 	"scripts": {
 		"start": "npm run start --workspace ",
