@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "reactstrap"
-import QuestionTable from "../Components/QuestionTable"
+import QuestionTable from "../components/QuestionTable"
 
 function Home() {
 	return (
