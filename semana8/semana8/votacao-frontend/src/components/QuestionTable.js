@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
-import { Button, Container, FormGroup, Table } from "reactstrap"
+import { Button, Container, Table } from "reactstrap"
 import { API_URL } from "../config"
 
 function QuestionTable() {
@@ -35,20 +35,19 @@ function QuestionTable() {
 		setNewQuestionText("")
 	}
 	return (
-		<Container>
-			<FormGroup>
-				<b>Criar nova questão</b>
-				<input
-					type="text"
-					value={newQuestionText}
-					onChange={e => setNewQuestionText(e.target.value)}
-					placeholder="Texto da nova questão"
-					className="form-control"
-				/>
-				<Button onClick={createNewQuestion} color="primary" style={{ marginTop: "5px" }}>
-					Criar nova questão
-				</Button>
-			</FormGroup>
+		<Container className="container">
+			<b>Criar nova questão</b>
+			<input
+				type="text"
+				value={newQuestionText}
+				onChange={e => setNewQuestionText(e.target.value)}
+				placeholder="Texto da nova questão"
+				className="form-control"
+			/>
+			<Button onClick={createNewQuestion} color="primary" style={{ marginTop: "5px" }}>
+				Criar nova questão
+			</Button>
+
 			<Table light="true">
 				<thead>
 					<tr>

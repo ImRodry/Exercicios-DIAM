@@ -37,17 +37,9 @@ function VotePage() {
 	}, [question])
 
 	return (
-		<Container
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				justifyContent: "center",
-				alignItems: "center",
-				height: "50vh",
-			}}
-		>
+		<Container className="container">
 			<h2>Voto na questão {question.pk}</h2>
-			<Form onSubmit={handleSubmit} style={{ width: "50%" }}>
+			<Form onSubmit={handleSubmit}>
 				<FormGroup>
 					<b>Texto:</b>
 					<p>{question.questao_texto}</p>

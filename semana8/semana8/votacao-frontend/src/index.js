@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import DetailPage from "./pages/DetailPage"
 import VotePage from "./pages/VotePage"
 import Header from "./components/Header"
+import "./styles/style.css"
 
 const root = createRoot(document.getElementById("root"))
 root.render(

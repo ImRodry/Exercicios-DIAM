@@ -38,17 +38,9 @@ function DetailPage() {
 	}, [question])
 
 	return (
-		<Container
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				justifyContent: "center",
-				alignItems: "center",
-				height: "50vh",
-			}}
-		>
+		<Container className="container">
 			<h2>Detalhes da questão {question.pk}</h2>
-			<Form style={{ width: "50%" }}>
+			<Form>
 				<FormGroup>
 					<b>Texto:</b>
 					<p>{question.questao_texto} </p>
@@ -86,8 +78,8 @@ function DetailPage() {
 						</tbody>
 					</Table>
 				</FormGroup>
+				<Button onClick={() => navigate("/")}>Voltar à página inicial</Button>
 			</Form>
-			<Button onClick={() => navigate("/")}>Voltar à página inicial</Button>
 		</Container>
 	)
 }

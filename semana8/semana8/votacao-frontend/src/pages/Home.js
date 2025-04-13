@@ -11,7 +11,7 @@ function Home() {
 
 function Content() {
 	return (
-		<Container style={{ marginTop: "20px", maxWidth: "800px" }}>
+		<Container className="container">
 			<Row>
 				<Col>
 					<QuestionTable />
