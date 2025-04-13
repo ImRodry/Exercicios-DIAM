@@ -27,9 +27,7 @@ function DetailPage() {
 			body: JSON.stringify(newOption),
 			headers: { "Content-Type": "application/json" },
 		})
-			.then(() => {
-				return fetch(URL_OPTIONS + question.pk)
-			})
+			.then(() => fetch(URL_OPTIONS + question.pk))
 			.then(r => r.json())
 			.then(data => {
 				setOptionList(data)

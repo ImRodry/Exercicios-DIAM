@@ -32,9 +32,7 @@ function QuestionTable() {
 			body: JSON.stringify(newQuestion),
 			headers: { "Content-Type": "application/json" },
 		})
-			.then(() => {
-				return fetch(URL_QUESTIONS)
-			})
+			.then(() => fetch(URL_QUESTIONS))
 			.then(r => r.json())
 			.then(data => {
 				setQuestionList(data)
