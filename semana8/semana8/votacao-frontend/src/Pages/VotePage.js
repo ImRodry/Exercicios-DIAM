@@ -49,7 +49,7 @@ function VotePage() {
 			}}
 		>
 			<h2>Voto na questão {question.pk}</h2>
-			<Form onSubmit={handleSubmit}>
+			<Form onSubmit={handleSubmit} style={{ width: "50%" }}>
 				<FormGroup>
 					<b>Texto:</b>
 					<p>{question.questao_texto}</p>
