@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useLocation, useNavigate } from "react-router"
 import { Button, Form, FormGroup, Table, Label, Container } from "reactstrap"
 import moment from "moment"
-import { API_URL } from "../index"
+import { API_URL } from "../config"
 
 const URL_OPTIONS = API_URL + "/options/"
 const URL_OPTION = API_URL + "/option/"

@@ -2,7 +2,7 @@ import moment from "moment"
 import { useEffect, useState } from "react"
 import { useNavigate, useLocation } from "react-router"
 import { Button, Container, Form, FormGroup, Table } from "reactstrap"
-import { API_URL } from "../index"
+import { API_URL } from "../config"
 
 const URL_OPTIONS = API_URL + "/options/"
 function DetailPage() {

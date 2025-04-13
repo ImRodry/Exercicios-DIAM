@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Button, Table } from "reactstrap"
-import { API_URL } from "../index"
+import { API_URL } from "../config"
 
 function QuestionTable() {
 	const URL_QUESTIONS = API_URL + "/questions/"
