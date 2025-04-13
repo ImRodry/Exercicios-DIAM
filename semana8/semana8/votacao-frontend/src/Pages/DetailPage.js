@@ -12,7 +12,7 @@ function DetailPage() {
 	const { state: question } = useLocation()
 	if (!question) navigate("/")
 
-	const createNewOption = () => {
+	const createNewOption = async () => {
 		if (!newOptionText.trim()) {
 			alert("Texto da opção não pode estar vazio.")
 			return
@@ -22,17 +22,13 @@ function DetailPage() {
 			opcao_texto: newOptionText,
 			votos: 0,
 		}
-		fetch(URL_OPTIONS + question.pk, {
+		const newOptionData = await fetch(URL_OPTIONS + question.pk, {
 			method: "POST",
 			body: JSON.stringify(newOption),
 			headers: { "Content-Type": "application/json" },
-		})
-			.then(() => fetch(URL_OPTIONS + question.pk))
-			.then(r => r.json())
-			.then(data => {
-				setOptionList(data)
-				setNewOptionText("")
-			})
+		}).then(r => r.json())
+		setOptionList([...optionList, newOptionData])
+		setNewOptionText("")
 	}
 
 	useEffect(() => {

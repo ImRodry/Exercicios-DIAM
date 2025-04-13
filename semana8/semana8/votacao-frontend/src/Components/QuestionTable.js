@@ -1,4 +1,3 @@
-import moment from "moment"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Button, Container, FormGroup, Table } from "reactstrap"
@@ -18,26 +17,22 @@ function QuestionTable() {
 
 	const [newQuestionText, setNewQuestionText] = useState("")
 
-	const createNewQuestion = () => {
+	const createNewQuestion = async () => {
 		if (!newQuestionText.trim()) {
 			alert("Insira o texto da questão.")
 			return
 		}
 		const newQuestion = {
 			questao_texto: newQuestionText,
-			pub_data: moment().toISOString(),
+			pub_data: new Date().toISOString(),
 		}
-		fetch(URL_QUESTIONS, {
+		const newQuestionData = await fetch(URL_QUESTIONS, {
 			method: "POST",
 			body: JSON.stringify(newQuestion),
 			headers: { "Content-Type": "application/json" },
-		})
-			.then(() => fetch(URL_QUESTIONS))
-			.then(r => r.json())
-			.then(data => {
-				setQuestionList(data)
-				setNewQuestionText("")
-			})
+		}).then(r => r.json())
+		setQuestionList([...questionList, newQuestionData])
+		setNewQuestionText("")
 	}
 	return (
 		<Container>

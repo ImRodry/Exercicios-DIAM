@@ -13,7 +13,7 @@ function VotePage() {
 	const [optionList, setOptionList] = useState([])
 	const [selectedOption, setSelectedOption] = useState(null)
 
-	const handleSubmit = event => {
+	const handleSubmit = async event => {
 		event.preventDefault()
 		if (!selectedOption) {
 			alert("Selecione uma opção antes de votar.")
@@ -21,7 +21,7 @@ function VotePage() {
 		}
 		const option = optionList.find(o => o.pk === selectedOption)
 		option.votos++
-		fetch(URL_OPTION + selectedOption, {
+		await fetch(URL_OPTION + selectedOption, {
 			method: "PUT",
 			body: JSON.stringify(option),
 			headers: { "Content-Type": "application/json" },
@@ -33,9 +33,7 @@ function VotePage() {
 	useEffect(() => {
 		fetch(URL_OPTIONS + question.pk)
 			.then(r => r.json())
-			.then(data => {
-				setOptionList(data)
-			})
+			.then(data => setOptionList(data))
 	}, [question])
 
 	return (
